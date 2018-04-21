@@ -1,0 +1,10 @@
+machine:
+    service:
+      - docker
+dependencies:
+    override:
+      - docker build -t devops
+
+test:
+    override:
+      - docker run app npm test
